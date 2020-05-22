@@ -1,0 +1,356 @@
+\chapter{Tutorial de utilização do \textit{Microsoft Visual Studio 2013}}\label{tutorial}
+
+
+Neste anexo são apresentadas as tarefas básicas de utilização da IDE do \textit{Visual Studio}, passo a passo, com a ilustração de todas as telas do ambiente. O objetivo deste tutorial, além de subsidiar a modelagem das tarefas, permite uma melhor análise de como o ambiente se apresenta para o usuário programador.
+
+
+% Texto
+\section{Configurar o IDE}
+
+Ao abrir o Visual Studio, o usuário poderá identificar as janelas de ferramenta, os menus e as barras de ferramentas, bem como o espaço da janela principal. As janelas de ferramentas estão encaixadas nos lados esquerdo e direito da janela do aplicativo, com \textbf{Início Rápido}, a barra de menus e a barra de ferramentas padrão na parte superior. No centro da janela do aplicativo está a \textbf{Página Inicial}. Quando o usuário carrega uma solução ou projeto, editores e designers aparecem no espaço onde o \textbf{Start Page} está. Ao desenvolver um aplicativo, o usuário passará a maior parte do seu tempo nessa área central~\cite {tutorial_visual:14}. 
+
+% Figura
+\begin{figure}[ht!]
+	\centering	
+	\caption[\hspace{-0.1cm}IDE do Visual Studio]{IDE do Visual Studio}
+	\vspace{-0.4cm}
+	\includegraphics[width=12cm,keepaspectratio=true]{figuras/tarefas/IDE_do_Visual_Studio.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte:~\cite {tutorial_visual:14} }
+	\label{fig:IDE_do_Visual_Studio}
+	\vspace{-0.5cm}
+\end{figure}
+
+
+O usuário pode fazer personalizações adicionais no Visual Studio, como alterar a fonte e o tamanho do texto no editor ou o tema da cor do IDE, usando a caixa de diálogo \textbf{Opções}. Dependendo da combinação de configurações que o usuário tiver aplicado, alguns itens na caixa de diálogo poderão não aparecer automaticamente. É possível garantir que todas as opções possíveis apareçam escolhendo a caixa de seleção \textbf{Mostrar todas as configurações}~\cite {tutorial_visual:14}. 
+
+% Figura
+\begin{figure}[ht!]
+	\centering	
+	\caption[\hspace{-0.1cm} Caixa de diálogo Opções]{Caixa de diálogo Opções}
+	\vspace{-0.4cm}
+	\includegraphics[width=12cm,keepaspectratio=true]{figuras/tarefas/Caixa_de_dialogo.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte:~\cite {tutorial_visual:14} }
+	\label{fig:Caixa_de_diálogo_Opções}
+	\vspace{-0.5cm}
+\end{figure}
+
+\textbf{Para alterar o tema da cor do IDE}
+
+1. Abrir o \textbf{opções} caixa de diálogo, escolhendo o \textbf{ferramentas} menu na parte superior e, em seguida, o \textbf{opções}... item.
+
+% Figura
+\begin{figure}[ht!]
+	\centering	
+	\caption[\hspace{-0.1cm} Caixa de diálogo Item]{Caixa de diálogo Item}
+	\vspace{-0.4cm}
+	\includegraphics[width=8cm,keepaspectratio=true]{figuras/tarefas/item.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte
+	\vspace{-0.1cm}
+	\\\textbf{\footnotesize Fonte:~\cite {tutorial_visual:14} }
+	\label{fig:Item}
+	\vspace{-0.5cm}
+\end{figure}
+
+\newpage
+2. Alterar \textbf{Tema da cor} para \textbf{Escuro} e clicar em \textbf{OK}.
+
+% Figura
+\begin{figure}[ht!]
+	\centering	
+	\caption[\hspace{-0.1cm} Caixa de diálogo Tema]{Caixa de diálogo Tema}
+	\vspace{-0.4cm}
+	\includegraphics[width=12cm,keepaspectratio=true]{figuras/tarefas/tema.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte
+	\vspace{-0.1cm}
+	\\\textbf{\footnotesize Fonte:~\cite {tutorial_visual:14} }
+	\label{fig:tema}
+	\vspace{-0.5cm}
+\end{figure}
+
+As cores no Visual Studio devem corresponder à seguinte imagem:
+
+% Figura
+\begin{figure}[ht!]
+	\centering	
+	\caption[\hspace{-0.1cm} Caixa de diálogo Tema Novo]{Caixa de diálogo Tema Novo}
+	\vspace{-0.4cm}
+	\includegraphics[width=12cm,keepaspectratio=true]{figuras/tarefas/tema_novo.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte:~\cite {tutorial_visual:14} }
+	\label{fig:tema_novo}
+	\vspace{-0.5cm}
+\end{figure}
+
+\section{Criar um aplicativo simples}
+
+Ao criar um aplicativo no Visual Studio, você cria primeiro um projeto e uma solução. Para este exemplo, você criará um projeto do Windows Presentation Foundation (WPF). 
+
+\textbf{ Para criar o projeto WPF}
+
+1. Criar um novo projeto. Na barra de menus, escolha \textbf{arquivo, novo, projeto....} 
+
+% Figura
+\begin{figure}[ht!]
+	\centering	
+	\caption[\hspace{-0.1cm} Caixa de diálogo Novo Projeto]{Caixa de diálogo Novo Projeto}
+	\vspace{-0.4cm}
+	\includegraphics[width=10cm,keepaspectratio=true]{figuras/tarefas/novo_projeto.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte:~\cite {tutorial_visual:14} }
+	\label{fig:novo_projeto}
+	\vspace{-0.5cm}
+\end{figure}
+
+
+O usuário também pode digitar Novo Projeto na caixa \textbf{Início Rápido} para obter o mesmo resultado.
+
+% Figura
+\begin{figure}[ht!]
+	\centering	
+	\caption[\hspace{-0.1cm} Caixa de diálogo Novo Projeto]{Caixa de diálogo Novo Projeto}
+	\vspace{-0.4cm}
+	\includegraphics[width=10cm,keepaspectratio=true]{figuras/tarefas/novo_projeto1.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte:~\cite {tutorial_visual:14} }
+	\label{fig:novo_projeto1}
+	\vspace{-0.5cm}
+\end{figure}
+
+2. Escolher do Visual Basic ou o modelo de aplicativo do Visual C$\sharp$ WPF escolhendo no painel esquerdo \textbf{instalado, modelos, Visual C$\sharp$, Windows}, por exemplo, em seguida, escolhendo o aplicativo do WPF no painel central. Nomeie o projeto HelloWPFApp na parte inferior da caixa de diálogo Novo projeto. 
+
+% Figura\dfrac{num}{den}
+\begin{figure}[ht!]
+	\centering	
+	\caption[\hspace{-0.1cm} Caixa de diálogo Novo Projeto]{Caixa de diálogo Novo Projeto}
+	\vspace{-0.4cm}
+	\includegraphics[width=12cm,keepaspectratio=true]{figuras/tarefas/novo_projeto2.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte:~\cite {tutorial_visual:14} }
+	\label{fig:novo_projeto2}
+	\vspace{-0.5cm}
+\end{figure}
+
+\newpage
+
+\textbf{Criar a interface do usuário}
+
+Será adicionados três tipos de controle a este aplicativo: um controle TextBlock, dois controles RadioButton e um controle Button.
+
+\textbf{Para adicionar um controle TextBlock}
+
+
+1. Abra o \textbf{Toolbox} janela escolhendo o \textbf{exibição} menu e o \textbf{Toolbox} item.
+
+2. Na \textbf{Caixa de Ferramentas}, procure pelo controle TextBlock. 
+
+% Figura
+\begin{figure}[ht!]
+	\centering	
+	\caption[\hspace{-0.1cm} Caixa de diálogo TextBlock]{TextBlock}
+	\vspace{-0.4cm}
+	\includegraphics[width=8cm,keepaspectratio=true]{figuras/tarefas/TextBlock.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte:~\cite {tutorial_visual:14} }
+	\label{fig:TextBlock}
+	\vspace{-0.5cm}
+\end{figure}
+
+
+
+3. Adicione um controle TextBlock à superfície de design, escolhendo o item de TextBlock e arrastando-o para a janela na superfície de design. Centralize o controle na parte superior da janela.
+
+\textbf{Para adicionar botões de opção}
+
+1. Na \textbf{Caixa de Ferramentas}, procure pelo controle RadioButton.
+
+% Figura
+\begin{figure}[ht!]
+	\centering	
+	\caption[\hspace{-0.1cm} Adicionando Botão Radio]{Adicionando Botão Radio}
+	\vspace{-0.4cm}
+	\includegraphics[width=8cm,keepaspectratio=true]{figuras/tarefas/botao_radio.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte:~\cite {tutorial_visual:14} }
+	\label{fig:radiobutton}
+	\vspace{-0.5cm}
+\end{figure}
+
+
+2. Adicione dois controles RadioButton no design da superfície escolhendo o item RadioButton e arrastando-a janela na superfície de design duas vezes e mover os botões (selecionando-as e usando as teclas de direção) para que os botões são exibidos lado a lado sob o controle TextBlock.
+
+3. Na janela \textbf{Propriedades} do controle RadioButton esquerdo, altere a propriedade \textbf{Nome} (a propriedade na parte superior da janela \textbf{Propriedades}) para RadioButton1. Verifique se que você selecionou o RadioButton e não o plano de fundo grade no formulário; o campo tipo de janela de propriedade no campo nome deve dizer RadioButton.
+
+4. No \textbf{propriedades} janela controle RadioButton direito, altere o \textbf{nome} propriedade RadioButton2e, em seguida, salve as alterações pressionando Ctrl-s ou usando o \textbf{arquivo} item de menu. Verifique se que você selecionou o RadioButton antes de alterar e salvar. 
+
+
+\textbf{Para adicionar o texto de exibição para cada botão de opção}
+
+1. Na superfície de design, abra o menu de atalho de RadioButton1 pressionando o botão direito do mouse enquanto selecionando o RadioButton1, escolha \textbf{editar texto} e, em seguida, digite "Hello".
+
+2. Abra o menu de atalho de RadioButton2, pressionando o botão direito do mouse enquanto seleciona RadioButton2, escolha \textbf{editar texto} e, em seguida, digite "Goodbye".
+
+\textbf{Para adicionar o controle de botão}
+
+1. No \textbf{Toolbox}, procure o \textbf{botão} controlar e adicioná-lo à superfície de design nos controles RadioButton selecionando o botão e arrastando-o para o formulário no modo design.
+
+2. No modo de exibição XAML, altere o valor de \textbf{conteúdo} para o controle de botão de Content=”Button” para Content=”Display”e, em seguida, salve as alterações (Ctrl-s ou use o \textbf{arquivo} menu).
+
+A marcação deve se parecer com o exemplo a seguir: 
+
+
+Interface do usuário final de Saudações:
+
+\begin{figure}[ht!]
+	\centering	
+	\caption[\hspace{-0.1cm} Janela Saudação Final]{Janela Saudação Final}
+	\vspace{-0.4cm}
+	\includegraphics[width=8cm,keepaspectratio=true]{figuras/tarefas/janela_final.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte:~\cite {tutorial_visual:14} }
+	\label{fig:janelafinal}
+	\vspace{-0.5cm}
+\end{figure}
+
+
+
+\textbf{Adicionar código a caixas de mensagem de exibição}
+
+1. Na superfície de design, clique duas vezes no botão \textbf{Exibição}.
+
+Greetings.xaml.vb ou Greetings.xaml.cs é aberto, com o cursor no evento ButtonClick. Você também pode adicionar um manipulador de eventos da seguinte maneira (se o código colado tiver um rabisco vermelho em todos os nomes, você provavelmente não selecionar os controles RadioButton na superfície de design e renomeá-las):
+
+\begin{figure}[ht!]
+	\centering	
+	\caption[\hspace{-0.1cm} Janela Saudação Final]{Janela Saudação Final}
+	\vspace{-0.4cm}
+	\includegraphics[width=8cm,keepaspectratio=true]{figuras/tarefas/codigo.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte:~\cite {tutorial_visual:14} }
+	\label{fig:saudacaofinal}
+	\vspace{-0.5cm}
+\end{figure}
+
+
+\section{Depurar e testar o aplicativo}
+
+Nesta etapa, você encontrará o erro que nós causamos anteriormente alterando o nome do arquivo XAML da janela principal. 
+
+\textbf{Para iniciar a depuração e localizar o erro}
+
+1. Inicie o depurador selecionando \textbf{Depurar} e \textbf{Iniciar Depuração}.
+
+\begin{figure}[ht!]
+	\centering	
+	\caption[\hspace{-0.1cm} Janela de Depuração]{Janela de Depuração}
+	\vspace{-0.4cm}
+	\includegraphics[width=6cm,keepaspectratio=true]{figuras/tarefas/depuracao.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte:~\cite {tutorial_visual:14} }
+	\label{fig:janeladepuracao}
+	\vspace{-0.5cm}
+\end{figure}
+
+\newpage
+Uma caixa de diálogo aparece, indicando que um IOException ocorreu: Não é possível localizar o recurso 'mainwindow.xaml'.
+
+2. Escolha o botão \textbf{OK} e pare o depurador. 
+
+\begin{figure}[ht!]
+	\centering	
+	\caption[\hspace{-0.1cm} Janela de Depuração]{Janela de Depuração}
+	\vspace{-0.4cm}
+	\includegraphics[width=6cm,keepaspectratio=true]{figuras/tarefas/depuracao1.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte:~\cite {tutorial_visual:14} }
+	\label{fig:janeladepuracao1}
+	\vspace{-0.5cm}
+\end{figure}
+
+\textbf{Para adicionar pontos de interrupção}
+
+
+1. Abra Greetings.xaml.vb ou Greetings.xaml.cs e selecione a linha a seguir: MessageBox.Show("Hello.")
+
+2. Adicione um ponto de interrupção do menu ao selecionar Depurar e Alternar Ponto de Interrupção. 
+
+\begin{figure}[ht!]
+	\centering	
+	\caption[\hspace{-0.1cm} Janela de Depuração]{Janela de Depuração}
+	\vspace{-0.4cm}
+	\includegraphics[width=8cm,keepaspectratio=true]{figuras/tarefas/depuracao2.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte:~\cite {tutorial_visual:14} }
+	\label{fig:depuracao2}
+	\vspace{-0.5cm}
+\end{figure}
+
+Um círculo vermelho aparece ao lado da linha de código na margem da extrema esquerda da janela do editor.
+
+3. Selecione a linha a seguir: MessageBox.Show("Goodbye.").
+
+4. Pressione a tecla F9 para adicionar um ponto de interrupção e, em seguida, pressione a tecla F5 para iniciar a depuração.
+
+5. Na janela \textbf{Saudações}, escolha o botão de opção \textbf{Olá} e escolha o botão \textbf{Exibição}.
+
+A linha MessageBox.Show("Hello.") é realçada em amarelo. Na parte inferior do IDE, Autos, locais e inspeção janelas são encaixadas no lado esquerdo e as janelas pilha de chamadas, pontos de interrupção, comando, imediato e saída são encaixadas no lado direito.
+
+6. Na barra de menus, escolha \textbf{Depurar, Depuração Circular}.
+
+O aplicativo retomará a execução e uma caixa de mensagem com a palavra ``Olá'' será exibida.
+
+7. Escolha o botão \textbf{OK} na caixa de mensagem para fechá-la.
+
+8. Na janela \textbf{Saudações}, escolha o botão de opção \textbf{Até logo} e escolha o botão \textbf{Exibição}.
+
+A linha MessageBox.Show("Goodbye.") é realçada em amarelo.
+
+9. Escolha a tecla F5 para continuar a depuração. Quando a caixa de mensagem for exibida, escolha o botão \textbf{OK} na caixa de mensagem para fechá-la.
+
+10. Pressione SHIFT + F5 chaves (pressione shift primeiro e, ao mesmo tempo, mantendo-a pressionada, pressione F5) para parar a depuração.
+
+11. Na barra de menus, escolha \textbf{Depurar, Desabilitar Todos os Pontos de Interrupção}.

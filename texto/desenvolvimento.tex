@@ -1,0 +1,85 @@
+%\chapter{Desenvolvimento}
+% Label para referenciar
+%\label{desenvolvimento}
+
+% Texto do capítulo
+
+%Esta seção apresenta o desenvolvimento deste trabalho. Cada etapa da metodologia sera detalhada e apresentada atraves de seu codigo e observação
+
+%\section{Classe utilitaria}
+
+%Durante o desenvolvimento houve a necessidade de se criar um controle de versão dos arquivos para corrigir um problema de codificação do texto coletado do twitter devido a acentuação. Para controlar os arquivos de texto originais e traduzidos de cada candidato, foi criado uma classe utilitária denominada UTIL com dois atributos como podemos ver respectivamente nas linhas 2 e 3 , um foi utilizado para armazenar o nome do usuário do twitter e a outro em qual a versão dos arquivos se encontra. Assim esses atributos podem ser acessados de forma global por todas as outras classes do projeto, permitindo quando precisar criar um arquivo  daquele candidato.
+
+
+%\section{Coleta de dados}
+
+%O primeiro passo para o desenvolvimento do sistema foi a implementação da captura dos tweets do usuário que será submetido à análise. A captura foi realizada por meio da API disponibilizada pelo Twitter, utilizando o método \emph{GET statuses/user/timeline}, o qual retorna os 200 últimos \emph{tweets}. Esse valor é o maximo permitido por requicoes. Desta forma foi nessesario fazer uma nova requisiçao ja que 200 twitter nao é suficiente para uma analise confiavel.Podemos perceber que foi realizada uma requisição à API passando como parâmetro o último \emph{tweet} obtido pela primeira requisição. A segunda requisição coleta os próximos 200 \emph{tweets}. Apenas o texto com o conteúdo dos twittes do json retornado foi salvo no arquivo.
+
+%O primeiro passo para o desenvolvimento do sistema foi a implementação da captura dos tweets do usuário que será submetido à análise. A captura foi realizada por meio da API disponibilizada pelo Twitter, utilizando o método \emph{GET statuses/user/timeline}, o qual retorna apenas os últimos  200 \emph{tweets}, esse e o valor máximo por cada requisição. Como esse valor e insuficiente para uma análise confiável foi feita uma nova chama ao método para coletar mais \emph{tweets} do usuário. Porem para isso é preciso passar como parâmetro na URL qual foi o último \emph{twitter} coletado para que a nova requisição traga apenas os \emph{twittes} que não foram coletados. Veja no Código 2.
+%\begin{center}
+%\begin{lstlisting}[title=Codigo 2 - Classe TwitterApi]
+%class TwitterAPI:
+%  def getTwitts(self):
+%    session = OAuth1Session(self.CONSUMER_KEY, self.CONSUMER_SECRET, self.ACCESS_TOKEN_SECRET, self.ACCOUNT_ID)    
+%    response = session.get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=' + Util.usuario + '&count=200')
+%    tweets = json.loads(response.content)   
+%    ultimo = tweets[len(tweets) -1]['id_str'].encode('utf-8')
+%    arq = open(Util.usuario + Util.versao + '_PT-BR.txt', 'w')
+%    linha = 0
+%    while linha < len(tweets):
+%      arq.write(tweets[linha]['text'].encode('utf-8') + "\n")
+%      linha += 1
+%    response = session.get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=' + Util.usuario + '&count=200&max_id=' + ultimo)
+%    tweets = json.loads(response.content)
+%   linha = 0
+%    while linha < len(tweets):
+%      arq.write(tweets[linha]['text'].encode('utf-8') + "\n")
+%      linha += 1
+%    arq.close()       
+%\end{lstlisting}
+%\textbf{\footnotesize Fonte: Criada pelo autor}
+%\end{center}
+
+
+%\section{Tradução do Texto}
+
+%A segunda parte do desenvolvimento do código foi a implementação da tradução dos \emph{tweets} obtidos utilizando a API do Google Tradutor. Primeiramente o algoritimo lê o arquivo em Português e em seguida o envia para a API e salva o texto traduzido em um novo arquivo.
+
+%A segunda parte do desenvolvimento do código foi a implementação da tradução dos \emph{tweets} . Foram testadas algumas Api gratuita porem todas tinha um limite caracteres ou por requisição ou cota diária o que todos eram insuficientes para este trabalho então foi utilizado a API  paga do Google Tradutor.
+
+%Primeiramente o algoritmo lê o arquivo em Português daquele usuário e versão definida na classe UTIL. Em seguida o envia para a API através de uma requisição post onde é passado as chaves, qual é o idioma do texto original e do texto a ser traduzido como mostra a linha 2 do código 3. Após a resposta, o texto traduzido e salvo em um novo arquivo utilizando os padrões definidos.
+
+%\begin{center}
+
+%Antes de salvar o texto traduzido no arquivo, foi necessário converter sua codificação para UTF-8 para garantir que não haja problema com acentuação
+
+%\section{Preparacao dos dados}
+
+%Não foi preciso implementar, porque devido aos testes realizados durante o desenvolvimento, percebemos que a própria API do \emph{Personality Insight} não analisa os dados que ela não comprende.
+
+%A terceira etapa do desenvolvimento definido na metodologia não foi precisa ser implementada, porque devido aos testes realizados durante o desenvolvimento e pesquisas feitas sobre o algoritmo utilizado no \emph{Personality Insight} as palavras que não se encontra no dicionário da língua inglesa não são consideradas na avaliação do perfil. 
+
+%\section{API Personality Insight}
+
+%A Classe Personality Insight apresenta o método que realiza a requição ao \emph{Bluemix} para a análise de personalidade. A API exige que seja enviado um \emph{profile} contendo o texto a ser analisado, qual idioma deseja obter os resultados, entre outras informaçoes opcionais. A API retorna um JSON com todos os resultados, que serão salvos em um outro arquivo de texto.
+
+%No último método novamente lemos um arquivo porem dessa vez o que possui o texto em inglês e em seguida é feito a requisição a ao Personality Insight. A api da ibm  e precisa ser configurada com os parâmetro da versão a ser utilizada no caso foi a v3, a última já desenvolvida, além do usuário e senha do desenvolvedor no  Bluemix . Já a requisição e feita através do método profile que recebe o texto em inglês a ser analisado, o formato dele, quais serão os resultados retornados, e o idioma de saída no caso português do Brasil. Após a requisição a resposta e salva no formato json original com todos os dados obtidos em um outro arquivo com o mesmo nome de usuário e versão dos arquivos de texto português e inglês.
+
+
+%\section{Correlação dos resultados dos testes}
+
+%\begin{table}[H]
+%\centering
+%\caption{My Personality 100-item x Personality Insight }
+%\label{Correlação Candidato 1}
+%\resizebox{\textwidth}{!}{%
+%\begin{tabular}{@{}cccc@{}}
+%\toprule
+%Candidato & Correlação   \\ \midrule
+%Candidato 1 & 0,42 &  \\
+%Candidato 2  & 0,28 \\
+%Candidato 3  & 0,36 \\
+ %\bottomrule
+%\end{tabular}%
+%}
+%\end{table}

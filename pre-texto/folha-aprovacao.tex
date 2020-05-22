@@ -1,0 +1,74 @@
+% ---
+% Inserir folha de aprovação
+% ---
+
+% Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
+% 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação
+% do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma
+% imagem da página assinada pela banca com o comando abaixo:
+%
+% \includepdf{folhadeaprovacao_final.pdf}
+%
+\begin{folhadeaprovacao}
+    
+    \begin{center}
+        {\ABNTEXchapterfont\large\imprimirautor}
+        
+        \vspace*{\fill}\vspace*{\fill}
+        \begin{center}
+            \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+        \end{center}
+        \vspace*{\fill}
+        
+        \hspace{.45\textwidth}
+        \begin{minipage}{.5\textwidth}
+            \imprimirpreambulo
+        \end{minipage}%
+        \vspace*{\fill}
+    \end{center}
+    
+    Trabalho aprovado. \imprimirlocal, 25 de dezembro de 2016:
+    
+    \assinatura{\textbf{\imprimirorientador} \\ PUC Minas (Orientador)} 
+    \assinatura{\textbf{Professor} \\ UFEXTERNA (Banca Examinadora)}
+    \assinatura{\textbf{Professor} \\  PUC Minas (Banca Examinadora)}
+    %\assinatura{\textbf{Professor} \\ Convidado 3}
+    %\assinatura{\textbf{Professor} \\ Convidado 4}
+    
+    \begin{center}
+        \vspace*{0.5cm}
+        {\large\imprimirlocal}
+        \par
+        {\large\imprimirdata}
+        \vspace*{1cm}
+    \end{center}
+    
+\end{folhadeaprovacao}
+% ---
+
+%versao antiga
+%% Termo de Aprovação
+%
+%% Texto da aprovação
+%\textoaprovacao{Dissertação apresentada ao Programa de Pós-Graduação em Informática da Pontifícia Universidade Católica de Minas Gerais,
+%como requisito parcial para obtenção do título de Mestre em Informática.}
+%%\onehalfspacing
+%%\onehalfspacing
+%%\onehalfspacing
+%% Primeira assinatura
+%\primeiroassina{Prof. Dr. Orientador -- PUC Minas (Orientador)}
+%
+%% Segunda assinatura
+%\segundoassina{Prof. Dr. Membro Externo -- UFEXTERNA (Banca Examinadora)}
+%%$^{a}$
+%% Terceira assinatura
+%\terceiroassina{Prof. Dr. Membro Interno -- PUC Minas (Banca Examinadora)}
+%
+%% Quarta assinatura
+%%\quartoassina{}
+%
+%% Data da defesa
+%\localdia{Belo Horizonte, 06 de julho de 2015.}
+%
+%% Gera o termo de aprovação
+%\termodeaprovacao
